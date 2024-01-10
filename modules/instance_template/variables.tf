@@ -26,6 +26,12 @@ variable "name_prefix" {
   default     = "default-instance-template"
 }
 
+variable "name_prefix_sep" {
+  description = "Name prefix separator for the instance template"
+  type        = string
+  default     = "-"
+}
+
 variable "machine_type" {
   description = "Machine type to create, e.g. n1-standard-1"
   type        = string

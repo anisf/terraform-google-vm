@@ -63,7 +63,7 @@ locals {
 # Instance Template
 ####################
 resource "google_compute_instance_template" "tpl" {
-  name_prefix             = "${var.name_prefix}-"
+  name_prefix             = "${var.name_prefix}${var.name_prefix_sep}"
   project                 = var.project_id
   machine_type            = var.machine_type
   labels                  = var.labels
